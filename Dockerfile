@@ -10,6 +10,7 @@ LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 RUN apt-get update -y \
  && apt-get install -y curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 iputils-ping \
  && useradd -d /home/container -m container
+ && setcap cap_net_raw+ep /bin/ping
  
 USER container
 ENV  USER=container HOME=/home/container

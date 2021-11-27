@@ -1,5 +1,5 @@
 #!/bin/bash
-setcap cap_net_raw+ep /bin/ping 
+sudo setcap cap_net_raw+ep /bin/ping 
 cd /home/container
 
 # Output Current Java Version
